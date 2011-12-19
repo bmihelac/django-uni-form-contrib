@@ -5,6 +5,13 @@
 What
 ----
 
+This is my fork with additional features:
+
+* `twitter_bootstrap` is a django app now, makes it uneccessary to copy templates
+  manually
+
+* added custom renderer that adds `inputs-list` class to radio fields
+
 Contributed templates for `Daniel Greenfeld <https://github.com/pydanny>`_ and `Miguel Araujo <https://github.com/maraujop>`_'s 
 awesome `django-uni-form <https://github.com/pydanny/django-uni-form>`_ library. Template sets are named for the library they 
 relate to.
@@ -12,9 +19,9 @@ relate to.
 How
 ---
 
-Install:::
+Install::
 
-    pip install -e git://github.com/bmihelac/django-uni-form-contrib.git@make-django-app#egg=uni_form_contrib
+    pip install -e git://github.com/bmihelac/django-uni-form-contrib.git#egg=uni_form_contrib
 
 Add ``uni_form_contrib.twitter_bootstrap`` application to ``INSTALLED_APPS`` in
 settings.py **before** ``uni_form`` so django will pick this templates instead
