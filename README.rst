@@ -20,6 +20,19 @@ Add ``uni_form_contrib.twitter_bootstrap`` application to ``INSTALLED_APPS`` in
 settings.py **before** ``uni_form`` so django will pick this templates instead
 of default ``uni_form`` templates.
 
+Widgets
+-------
+
+For list of options, Bootstrap expect list tag to have a `inputs-list` class.
+``BootstrapRadioFieldRenderer`` makes it easy to add css class:::
+
+    from uni_form_contrib.twitter_bootstrap.widgets import BootstrapRadioFieldRenderer
+
+    field = forms.ChoiceField(label=_('field'),
+            choices=FIELD_CHOICES,
+            widget=forms.widgets.RadioSelect(renderer=BootstrapRadioFieldRenderer)
+            )
+
 Who
 ---
 
